@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <title>Fretamento de carga - Glysk</title>
+</head>
+<body>
+
+    <header class="titulomenu">
+
+        <div class="titulo">
+            <h1 class="h1menu">Glysk</h1>
+            <h3 class="h3menu">Seu tempo merece voar</h3>
+        </div>
+
+        <section class="botoes">
+
+            <a href="login.html" class="botaologin">
+                Fazer login
+            </a>
+
+            <a href="criarconta.html" class="botaocriarconta">
+                Criar conta
+            </a>
+
+        </section>
+
+    </header>
+
+
+    <main>
+
+        <section class="fretecarga">
+
+            <h1>Fretamento de carga</h1>
+
+            <p>
+                Transporte sua carga com segurança e eficiência.
+            </p>
+
+            <form
+                class="formfretecarga"
+                action="login.html"
+            >
+
+                <section class="campofretecarga">
+
+                    <label for="origemcarga">
+                        Origem
+                    </label>
+
+                    <input
+                        type="text"
+                        id="origemcarga"
+                        placeholder="Ex: Porto Alegre, RS"
+                        required
+                    >
+
+
+                    <label for="destinocarga">
+                        Destino
+                    </label>
+
+                    <input
+                        type="text"
+                        id="destinocarga"
+                        placeholder="Ex: São Paulo, SP"
+                        required
+                    >
+
+
+                    <label for="datacarga">
+                        Data do transporte
+                    </label>
+
+                    <input
+                        type="date"
+                        id="datacarga"
+                        required
+                    >
+
+
+                    <label for="tipocarga">
+                        Tipo de carga
+                    </label>
+
+                    <select id="tipocarga" required>
+
+                        <option value="">
+                            Selecione uma opção
+                        </option>
+
+                        <option value="documentos">
+                            Documentos
+                        </option>
+
+                        <option value="eletronicos">
+                            Eletrônicos
+                        </option>
+
+                        <option value="mercadorias">
+                            Mercadorias
+                        </option>
+
+                        <option value="equipamentos">
+                            Equipamentos
+                        </option>
+
+                        <option value="outros">
+                            Outros
+                        </option>
+
+                    </select>
+
+
+                    <label for="peso">
+                        Peso aproximado (kg)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="peso"
+                        min="1"
+                        placeholder="Ex: 250"
+                        required
+                    >
+
+
+                    <label for="volume">
+                        Quantidade de volumes
+                    </label>
+
+                    <input
+                        type="number"
+                        id="volume"
+                        min="1"
+                        placeholder="Ex: 10"
+                        required
+                    >
+
+                </section>
+
+
+                <label for="observacoescarga">
+                    Informações sobre a carga
+                </label>
+
+                <textarea
+                    id="observacoescarga"
+                    rows="4"
+                    placeholder="Descreva as características ou necessidades especiais da carga..."
+                ></textarea>
+
+
+                <button type="submit">
+                    Solicitar cotação
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 Glysk - Seu tempo merece voar</p>
+
+    </footer>
+</body>
+</html>
