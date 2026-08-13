@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <title>Fretamento individual - Glysk</title>
+</head>
+<body>
+
+    <header class="titulomenu">
+
+        <div class="titulo">
+            <h1 class="h1menu">Glysk</h1>
+            <h3 class="h3menu">Seu tempo merece voar</h3>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="freteindividual">
+
+            <h1>Fretamento individual</h1>
+
+            <p>
+                Personalize sua viagem de acordo com suas necessidades.
+            </p>
+
+            <form
+                class="formfreteindividual"
+                action="cotacaoconcluida.html"
+            >
+
+                <section class="campofreteindividual">
+
+                    <label for="origem">
+                        Origem
+                    </label>
+
+                    <input
+                        type="text"
+                        id="origem"
+                        placeholder="Ex: Rio de Janeiro, RJ"
+                        required
+                    >
+
+
+                    <label for="destino">
+                        Destino
+                    </label>
+
+                    <input
+                        type="text"
+                        id="destino"
+                        placeholder="Ex: São Paulo, SP"
+                        required
+                    >
+
+
+                    <label for="data">
+                        Data do voo
+                    </label>
+
+                    <input
+                        type="date"
+                        id="data"
+                        required
+                    >
+
+
+                    <label for="horario">
+                        Horário de saída
+                    </label>
+
+                    <input
+                        type="time"
+                        id="horario"
+                        required
+                    >
+
+
+                    <label for="aeronave">
+                        Tipo de aeronave
+                    </label>
+
+                    <select id="aeronave" required>
+
+                        <option value="">
+                            Selecione uma opção
+                        </option>
+
+                        <option value="jato">
+                            Jato executivo
+                        </option>
+
+                        <option value="aviao">
+                            Avião
+                        </option>
+
+                        <option value="helicoptero">
+                            Helicóptero
+                        </option>
+
+                    </select>
+
+
+                    <label for="viagem">
+                        Tipo de viagem
+                    </label>
+
+                    <select id="viagem" required>
+
+                        <option value="">
+                            Selecione uma opção
+                        </option>
+
+                        <option value="ida">
+                            Somente ida
+                        </option>
+
+                        <option value="ida-volta">
+                            Ida e volta
+                        </option>
+
+                    </select>
+
+                </section>
+
+
+                <button type="submit">
+                    Solicitar cotação
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 Glysk - Seu tempo merece voar</p>
+
+    </footer>
+</body>
+</html>
