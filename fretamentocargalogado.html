@@ -1,147 +1,270 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Fretamento de carga - Glysk</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+        rel="stylesheet"
+    >
+
 </head>
+
 <body>
 
     <header class="titulomenu">
 
         <div class="titulo">
-            <h1 class="h1menu">Glysk</h1>
-            <h3 class="h3menu">Seu tempo merece voar</h3>
+
+            <h1 class="h1menu">
+                Glysk
+            </h1>
+
+            <h3 class="h3menu">
+                Seu tempo merece voar
+            </h3>
+
+        </div>
+
+
+        <div class="botoes">
+
+            <a
+                href="menu.html"
+                class="botaocriarconta"
+            >
+                Menu
+            </a>
+
+            <a
+                href="index.html"
+                class="botaologin"
+            >
+                Sair
+            </a>
+
         </div>
 
     </header>
 
+
     <main>
 
-        <section class="fretecarga">
+        <section class="fretepagina">
 
-            <h1>Fretamento de carga</h1>
+            <h1>
+                Fretamento de carga
+            </h1>
 
             <p>
-                Transporte sua carga com segurança e eficiência.
+                Você está logado. Finalize os dados para solicitar
+                sua cotação.
             </p>
 
+
             <form
-                class="formfretecarga"
+                class="formfrete"
                 action="cotacaoconcluida.html"
+                method="get"
             >
 
-                <section class="campofretecarga">
+                <div class="campos">
 
-                    <label for="origemcarga">
-                        Origem
+                    <div class="campo">
+
+                        <label for="origem">
+                            Origem
+                        </label>
+
+                        <input
+                            type="text"
+                            id="origem"
+                            name="origem"
+                            placeholder="Ex: Porto Alegre, RS"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="destino">
+                            Destino
+                        </label>
+
+                        <input
+                            type="text"
+                            id="destino"
+                            name="destino"
+                            placeholder="Ex: São Paulo, SP"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="data">
+                            Data do transporte
+                        </label>
+
+                        <input
+                            type="date"
+                            id="data"
+                            name="data"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="aeronave">
+                            Escolha sua aeronave
+                        </label>
+
+                        <select
+                            id="aeronave"
+                            name="aeronave"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione uma aeronave
+                            </option>
+
+                            <option value="caravan">
+                                Cessna Caravan - Avião
+                            </option>
+
+                            <option value="kingair350">
+                                King Air 350 - Avião
+                            </option>
+
+                            <option value="pc12">
+                                Pilatus PC-12 - Avião
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="tipocarga">
+                            Tipo de carga
+                        </label>
+
+                        <select
+                            id="tipocarga"
+                            name="tipocarga"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione uma opção
+                            </option>
+
+                            <option value="documentos">
+                                Documentos
+                            </option>
+
+                            <option value="eletronicos">
+                                Eletrônicos
+                            </option>
+
+                            <option value="mercadorias">
+                                Mercadorias
+                            </option>
+
+                            <option value="equipamentos">
+                                Equipamentos
+                            </option>
+
+                            <option value="outros">
+                                Outros
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="peso">
+                            Peso aproximado (kg)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="peso"
+                            name="peso"
+                            min="1"
+                            placeholder="Ex: 250"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="volume">
+                            Quantidade de volumes
+                        </label>
+
+                        <input
+                            type="number"
+                            id="volume"
+                            name="volume"
+                            min="1"
+                            placeholder="Ex: 10"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo campoobservacoes">
+
+                    <label for="observacoes">
+                        Informações sobre a carga
                     </label>
 
-                    <input
-                        type="text"
-                        id="origemcarga"
-                        placeholder="Ex: Porto Alegre, RS"
-                        required
-                    >
+                    <textarea
+                        id="observacoes"
+                        name="observacoes"
+                        rows="5"
+                        placeholder="Descreva as características ou necessidades especiais da carga..."
+                    ></textarea>
 
-
-                    <label for="destinocarga">
-                        Destino
-                    </label>
-
-                    <input
-                        type="text"
-                        id="destinocarga"
-                        placeholder="Ex: São Paulo, SP"
-                        required
-                    >
-
-
-                    <label for="datacarga">
-                        Data do transporte
-                    </label>
-
-                    <input
-                        type="date"
-                        id="datacarga"
-                        required
-                    >
-
-
-                    <label for="tipocarga">
-                        Tipo de carga
-                    </label>
-
-                    <select id="tipocarga" required>
-
-                        <option value="">
-                            Selecione uma opção
-                        </option>
-
-                        <option value="documentos">
-                            Documentos
-                        </option>
-
-                        <option value="eletronicos">
-                            Eletrônicos
-                        </option>
-
-                        <option value="mercadorias">
-                            Mercadorias
-                        </option>
-
-                        <option value="equipamentos">
-                            Equipamentos
-                        </option>
-
-                        <option value="outros">
-                            Outros
-                        </option>
-
-                    </select>
-
-
-                    <label for="peso">
-                        Peso aproximado (kg)
-                    </label>
-
-                    <input
-                        type="number"
-                        id="peso"
-                        min="1"
-                        placeholder="Ex: 250"
-                        required
-                    >
-
-
-                    <label for="volume">
-                        Quantidade de volumes
-                    </label>
-
-                    <input
-                        type="number"
-                        id="volume"
-                        min="1"
-                        placeholder="Ex: 10"
-                        required
-                    >
-
-                </section>
-
-
-                <label for="observacoescarga">
-                    Informações sobre a carga
-                </label>
-
-                <textarea
-                    id="observacoescarga"
-                    rows="4"
-                    placeholder="Descreva as características ou necessidades especiais da carga..."
-                ></textarea>
+                </div>
 
 
                 <button type="submit">
@@ -157,8 +280,12 @@
 
     <footer>
 
-        <p>© 2026 Glysk - Seu tempo merece voar</p>
+        <p>
+            © 2026 Glysk - Seu tempo merece voar
+        </p>
 
     </footer>
+
 </body>
+
 </html>
