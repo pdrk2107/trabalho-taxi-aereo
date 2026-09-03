@@ -1,758 +1,415 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-html{
-    overflow-x: hidden;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
 }
 
+/* =========================
+   CABEÇALHO
+========================= */
 
-body{
-    background-color: black;
+header {
+    background-color: #0b1f3a;
     color: white;
-    font-family: "Audiowide", sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.logo h1 {
+    font-size: 32px;
+    margin-bottom: 4px;
+}
 
-a{
+.logo p {
+    font-size: 14px;
+    color: #cbd7e8;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons a {
     text-decoration: none;
     color: white;
-}
-
-
-a:visited{
-    color: white;
-}
-
-
-a:hover{
-    color: #7A6D8C;
-}
-
-
-/* ==============================
-   CABEÇALHO
-============================== */
-
-.titulomenu{
-    width: 100%;
-    min-height: 100px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-
-    margin-top: 10px;
-}
-
-
-.titulo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-}
-
-
-.h1menu{
-    font-size: 32px;
-    margin: 0;
-}
-
-
-.h3menu{
+    background-color: #1769aa;
+    padding: 10px 18px;
+    border-radius: 6px;
     font-size: 14px;
-    margin: 0;
 }
 
-
-/* ==============================
-   BOTÕES DO CABEÇALHO
-============================== */
-
-.botoes{
-    position: absolute;
-
-    right: 40px;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 8px;
+.header-buttons a:hover {
+    background-color: #2186d0;
 }
 
+/* =========================
+   CONTAINER
+========================= */
 
-.botaologin,
-.botaocriarconta{
-    display: block;
-
-    min-width: 130px;
-
-    padding: 9px 20px;
-
-    border-radius: 8px;
-
-    background-color: #7A6D8C;
-
-    color: white !important;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 13px;
-
-    text-align: center;
-
-    transition: 0.2s;
-}
-
-
-.botaologin:hover,
-.botaocriarconta:hover{
-    background-color: #5f526e;
-
-    transform: translateY(-2px);
-
-    color: white !important;
-}
-
-
-/* ==============================
-   BANNER
-============================== */
-
-.banner{
-    width: 100%;
-    height: 300px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    margin-top: 10px;
-}
-
-
-.banner img{
-    width: 100%;
-    height: 300px;
-
-    object-fit: cover;
-
-    display: block;
-
-    opacity: 0.65;
-}
-
-
-.legendabanner{
-    position: absolute;
-
-    width: 80%;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-
-    text-shadow: 0 2px 10px black;
-}
-
-
-.legendabanner h2{
-    font-size: 32px;
-
-    margin-bottom: 12px;
-}
-
-
-.legendabanner p{
-    font-family: Arial, sans-serif;
-
-    font-size: 16px;
-
-    line-height: 1.5;
-}
-
-
-/* ==============================
-   SERVIÇOS
-============================== */
-
-.servicos{
+.container {
     width: 90%;
-    max-width: 1100px;
-
-    margin: 45px auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
+    max-width: 1200px;
+    margin: 30px auto;
 }
 
+/* =========================
+   BANNER
+========================= */
 
-.cardservico{
-    display: block;
-
-    background-color: rgb(30, 30, 30);
-
+.banner {
+    background-color: #dcecff;
     border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
 
+.banner h2 {
+    color: #0b1f3a;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 17px;
+    color: #445;
+}
+
+/* =========================
+   CARDS DE SERVIÇO
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
     overflow: hidden;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-
-    transition: 0.25s;
-
-    color: white !important;
+    text-decoration: none;
+    color: #222;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s;
 }
 
-
-.cardservico:hover{
-    transform: translateY(-6px);
-
-    box-shadow:
-        0 10px 30px rgba(122, 109, 140, 0.25);
-
-    color: white !important;
+.card:hover {
+    transform: translateY(-5px);
 }
 
+/* IMAGENS DOS CARDS - DIMINUÍDAS */
 
-.cardservico img{
+.card img {
     width: 100%;
-    height: 170px;
-
+    height: 150px;
     object-fit: cover;
-
     display: block;
 }
 
+.card-content {
+    padding: 20px;
+}
 
-.conteudoservico{
-    padding: 22px;
+.card-content h3 {
+    color: #0b1f3a;
+    margin-bottom: 8px;
+    font-size: 21px;
+}
 
+.card-content p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* =========================
+   FORMULÁRIOS
+========================= */
+
+.form-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.form-box h2 {
+    color: #0b1f3a;
+    margin-bottom: 25px;
     text-align: center;
 }
 
-
-.conteudoservico h2{
-    font-size: 18px;
-
-    margin-bottom: 12px;
+.form-group {
+    margin-bottom: 18px;
 }
 
-
-.conteudoservico p{
-    font-family: Arial, sans-serif;
-
-    color: #ddd;
-
-    line-height: 1.5;
-
-    font-size: 14px;
-
-    min-height: 65px;
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #333;
 }
 
-
-.conteudoservico span{
-    display: inline-block;
-
-    margin-top: 18px;
-
-    padding: 10px 15px;
-
-    background-color: #7A6D8C;
-
-    border-radius: 7px;
-
-    font-size: 12px;
-
-    color: white;
-}
-
-
-/* ==============================
-   PÁGINAS DE LOGIN
-============================== */
-
-.cabecalhoauth{
+.form-group input,
+.form-group select,
+.form-group textarea {
     width: 100%;
+    padding: 11px;
+    border: 1px solid #c7cdd6;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.button {
+    display: inline-block;
+    border: none;
+    background-color: #1769aa;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #2186d0;
+}
+
+.button-secondary {
+    background-color: #6c757d;
+}
+
+.button-secondary:hover {
+    background-color: #555;
+}
+
+.form-buttons {
     display: flex;
-
     justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
 
-    align-items: center;
+/* =========================
+   LOGIN
+========================= */
 
+.login-box {
+    max-width: 450px;
+    margin: 60px auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #0b1f3a;
+    margin-bottom: 25px;
+}
+
+.login-box .button {
+    width: 100%;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #1769aa;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   PÁGINA DE CONCLUSÃO
+========================= */
+
+.success-box {
+    max-width: 650px;
+    margin: 70px auto;
+    background-color: white;
+    padding: 45px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.success-box h2 {
+    color: #1769aa;
+    margin-bottom: 15px;
+}
+
+.success-box p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   MENU LOGADO
+========================= */
+
+.menu-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-title h2 {
+    color: #0b1f3a;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.menu-title p {
+    color: #666;
+}
+
+.logout {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logout a {
+    color: #c62828;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.page-title {
+    text-align: center;
+    color: #0b1f3a;
+    margin-bottom: 25px;
+}
+
+.page-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: #0b1f3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
     margin-top: 50px;
 }
 
-
-.cabecalhoauth h1{
-    width: 200px;
-
-    padding: 10px;
-
-    background-color: #7A6D8C;
-
-    border-radius: 10px;
-
-    text-align: center;
-
-    font-size: 20px;
-}
-
-
-.sectionauth{
-    width: 300px;
-
-    max-width: 90%;
-
-    margin: 60px auto;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
-}
-
-
-.sectionauth form{
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
-}
-
-
-.avisologin{
-    font-family: Arial, sans-serif;
-
-    color: #ddd;
-
-    text-align: center;
-
-    line-height: 1.5;
-
-    margin-bottom: 10px;
-}
-
-
-/* ==============================
-   CAMPOS DOS FORMULÁRIOS
-============================== */
-
-label{
-    color: white;
-
+footer p {
     font-size: 14px;
+    color: #cbd7e8;
 }
 
-
-input,
-select,
-textarea{
-    font-family: Arial, sans-serif;
-}
-
-
-input,
-select,
-textarea{
-    width: 100%;
-
-    padding: 12px;
-
-    border: none;
-
-    border-radius: 7px;
-
-    background-color: white;
-
-    color: black;
-}
-
-
-textarea{
-    resize: vertical;
-
-    min-height: 100px;
-}
-
-
-input:focus,
-select:focus,
-textarea:focus{
-    outline: 2px solid #7A6D8C;
-}
-
-
-/* ==============================
-   BOTÕES DOS FORMULÁRIOS
-============================== */
-
-.sectionauth button,
-.formfrete button{
-    width: 100%;
-
-    border: none;
-
-    padding: 12px;
-
-    border-radius: 7px;
-
-    background-color: #7A6D8C;
-
-    color: white;
-
-    font-family: "Audiowide", sans-serif;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-
-.sectionauth button:hover,
-.formfrete button:hover{
-    background-color: #5f526e;
-
-    transform: translateY(-2px);
-}
-
-
-.linkauth{
-    text-align: center;
-
-    margin-top: 10px;
-
-    color: #aaa;
-}
-
-
-.linkauth:hover{
-    color: #7A6D8C;
-}
-
-
-.voltar{
-    display: block;
-
-    text-align: center;
-
-    margin-top: 5px;
-
-    color: #aaa;
-}
-
-
-.voltar:hover{
-    color: #7A6D8C;
-}
-
-
-/* ==============================
-   PÁGINAS DE FRETAMENTO
-============================== */
-
-.fretepagina{
-    width: 750px;
-
-    max-width: 92%;
-
-    margin: 40px auto;
-
-    padding: 35px;
-
-    background-color: rgb(24, 24, 24);
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 5px 25px rgba(0, 0, 0, 0.5);
-
-    text-align: center;
-}
-
-
-.fretepagina h1{
-    margin-bottom: 10px;
-
-    font-size: 25px;
-}
-
-
-.fretepagina > p{
-    margin-bottom: 30px;
-
-    color: #ddd;
-
-    font-family: Arial, sans-serif;
-
-    line-height: 1.5;
-}
-
-
-.formfrete{
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 18px;
-}
-
-
-.campos{
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 15px;
-
-    text-align: left;
-}
-
-
-.campo{
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 7px;
-}
-
-
-.campoobservacoes{
-    text-align: left;
-}
-
-
-/* ==============================
-   COTAÇÃO CONCLUÍDA
-============================== */
-
-.cotacaoconcluida{
-    width: 600px;
-
-    max-width: 90%;
-
-    margin: 80px auto;
-
-    padding: 50px 35px;
-
-    background-color: rgb(24, 24, 24);
-
-    border-radius: 15px;
-
-    box-shadow:
-        0 5px 25px rgba(0, 0, 0, 0.5);
-
-    text-align: center;
-}
-
-
-.cotacaoconcluida h1{
-    margin-bottom: 20px;
-}
-
-
-.cotacaoconcluida p{
-    margin-bottom: 15px;
-
-    font-family: Arial, sans-serif;
-
-    line-height: 1.5;
-
-    color: #ddd;
-}
-
-
-.voltarmenu{
-    display: inline-block;
-
-    margin-top: 20px;
-
-    padding: 12px 30px;
-
-    background-color: #7A6D8C;
-
-    border-radius: 8px;
-
-    color: white !important;
-
-    transition: 0.2s;
-}
-
-
-.voltarmenu:hover{
-    background-color: #5f526e;
-
-    color: white !important;
-
-    transform: translateY(-2px);
-}
-
-
-/* ==============================
-   RODAPÉ
-============================== */
-
-footer{
-    margin-top: 40px;
-
-    padding: 20px;
-
-    background-color: rgb(24, 24, 24);
-
-    text-align: center;
-}
-
-
-footer p{
-    margin: 5px;
-
-    color: #ccc;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 13px;
-}
-
-
-/* ==============================
+/* =========================
    RESPONSIVIDADE
-============================== */
+========================= */
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
 
-    .titulomenu{
-        min-height: 150px;
-
+    header {
         padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
 
-
-    .titulo{
-        margin-bottom: 65px;
-    }
-
-
-    .h1menu{
-        font-size: 28px;
-    }
-
-
-    .h3menu{
-        font-size: 12px;
-    }
-
-
-    .botoes{
-        right: 50%;
-
-        bottom: 15px;
-
-        transform: translateX(50%);
-
-        flex-direction: row;
-    }
-
-
-    .servicos{
-        grid-template-columns: 1fr;
-
-        max-width: 500px;
-    }
-
-
-    .cardservico img{
-        height: 200px;
-    }
-
-
-    .campos{
+    .cards {
         grid-template-columns: 1fr;
     }
 
-
-    .fretepagina{
-        padding: 25px 20px;
+    .form-row {
+        grid-template-columns: 1fr;
     }
 
+    .container {
+        width: 94%;
+    }
+
+    .banner {
+        padding: 30px 20px;
+    }
+
+    .banner h2 {
+        font-size: 25px;
+    }
 }
 
+@media (max-width: 500px) {
 
-@media (max-width: 450px){
-
-    .botoes{
-        width: 90%;
-
-        justify-content: center;
+    .header-buttons {
+        flex-direction: column;
+        width: 100%;
     }
 
-
-    .botaologin,
-    .botaocriarconta{
-        min-width: 0;
-
-        flex: 1;
-
-        padding: 9px 10px;
-
-        font-size: 11px;
+    .header-buttons a {
+        width: 100%;
     }
 
-
-    .banner{
-        height: 230px;
+    .form-box,
+    .login-box,
+    .success-box {
+        padding: 22px;
     }
 
-
-    .banner img{
-        height: 230px;
+    .form-buttons {
+        flex-direction: column;
     }
 
-
-    .legendabanner h2{
-        font-size: 24px;
+    .button {
+        width: 100%;
     }
 
-
-    .legendabanner p{
-        font-size: 12px;
+    .card img {
+        height: 130px;
     }
-
-
-    .conteudoservico p{
-        min-height: auto;
-    }
-
-
-    .sectionauth{
-        width: 90%;
-
-        max-width: 350px;
-    }
-
-
-    .cotacaoconcluida{
-        margin: 50px auto;
-
-        padding: 35px 20px;
-    }
-
 }
