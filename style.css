@@ -4,274 +4,364 @@
     box-sizing: border-box;
 }
 
+
 html{
     overflow-x: hidden;
 }
 
+
 body{
     background-color: black;
+    color: white;
     font-family: "Audiowide", sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-.titulomenu{
-    color: aliceblue;
-    display: flex;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 20px auto 0;
-    border-radius: 15px;
-    position: relative;
-}
-
-.titulo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.h1menu{
-    margin: 0;
-}
-
-.h3menu{
-    margin: 0;
-    font-size: 16px;
-}
 
 a{
-    font-size: small;
-    color: white;
     text-decoration: none;
+    color: white;
 }
+
 
 a:visited{
     color: white;
 }
 
+
 a:hover{
     color: #7A6D8C;
 }
 
-a:active{
-    color: #7A6D8C;
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.titulomenu{
+    width: 100%;
+    min-height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    margin-top: 10px;
 }
 
-.botoes{
+
+.titulo{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    right: 40px;
+    align-items: center;
+
+    text-align: center;
 }
+
+
+.h1menu{
+    font-size: 32px;
+    margin: 0;
+}
+
+
+.h3menu{
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* ==============================
+   BOTÕES DO CABEÇALHO
+============================== */
+
+.botoes{
+    position: absolute;
+
+    right: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
 
 .botaologin,
 .botaocriarconta{
+    display: block;
+
+    min-width: 130px;
+
+    padding: 9px 20px;
+
+    border-radius: 8px;
+
     background-color: #7A6D8C;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
+
+    color: white !important;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
     text-align: center;
+
     transition: 0.2s;
 }
+
 
 .botaologin:hover,
 .botaocriarconta:hover{
     background-color: #5f526e;
-    color: white;
+
     transform: translateY(-2px);
+
+    color: white !important;
 }
 
-nav{
-    background-color: rgb(24, 24, 24);
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 540px;
-    max-width: 95%;
-    margin: 0 auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
-}
 
-nav ul{
-    gap: 40px;
-    display: flex;
-    list-style: none;
-    padding: 12px 15px;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-}
-
-nav a{
-    color: white;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-nav a:hover{
-    color: #7A6D8C;
-}
-
-.li1,
-.li2,
-.li3{
-    position: relative;
-}
-
-.divli1,
-.divli2,
-.divli3{
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 220px;
-    padding: 15px;
-    background-color: rgb(24, 24, 24);
-    color: white;
-    border-radius: 8px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.2s;
-    z-index: 100;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-}
-
-.divli1 p,
-.divli2 p,
-.divli3 p{
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.4;
-}
-
-.li1:hover .divli1,
-.li2:hover .divli2,
-.li3:hover .divli3{
-    opacity: 1;
-    visibility: visible;
-}
+/* ==============================
+   BANNER
+============================== */
 
 .banner{
+    width: 100%;
+    height: 300px;
+
     position: relative;
-    height: 250px;
-    margin-top: 30px;
+
     overflow: hidden;
+
+    margin-top: 10px;
 }
+
 
 .banner img{
     width: 100%;
-    height: 250px;
+    height: 300px;
+
     object-fit: cover;
+
+    display: block;
+
+    opacity: 0.65;
+}
+
+
+.legendabanner{
+    position: absolute;
+
+    width: 80%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    text-shadow: 0 2px 10px black;
+}
+
+
+.legendabanner h2{
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+
+.legendabanner p{
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   SERVIÇOS
+============================== */
+
+.servicos{
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 45px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.cardservico{
+    display: block;
+
+    background-color: rgb(30, 30, 30);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+
+    transition: 0.25s;
+
+    color: white !important;
+}
+
+
+.cardservico:hover{
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 30px rgba(122, 109, 140, 0.25);
+
+    color: white !important;
+}
+
+
+.cardservico img{
+    width: 100%;
+    height: 170px;
+
+    object-fit: cover;
+
     display: block;
 }
 
-.banner .legendabanner{
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    width: 80%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 15px;
-    z-index: 10;
+
+.conteudoservico{
+    padding: 22px;
+
     text-align: center;
-    line-height: 1.5;
-    text-shadow: 0 2px 8px black;
 }
 
-.beneficios{
-    display: grid;
-    grid-template-columns: repeat(3, 250px);
-    justify-content: center;
-    gap: 20px;
-    width: 90%;
-    margin: 50px auto;
+
+.conteudoservico h2{
+    font-size: 18px;
+
+    margin-bottom: 12px;
 }
 
-.beneficios article{
-    background-color: rgb(39, 39, 39);
-    color: white;
-    width: 250px;
-    min-height: 280px;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-    transition: 0.2s;
-}
 
-.beneficios article:hover{
-    transform: scale(1.05);
-}
-
-.beneficios article h2{
-    margin-bottom: 10px;
-}
-
-.beneficios article p{
+.conteudoservico p{
     font-family: Arial, sans-serif;
-    line-height: 1.4;
+
+    color: #ddd;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+
+    min-height: 65px;
 }
 
-.beneficios article img{
+
+.conteudoservico span{
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 10px 15px;
+
+    background-color: #7A6D8C;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    color: white;
+}
+
+
+/* ==============================
+   PÁGINAS DE LOGIN
+============================== */
+
+.cabecalhoauth{
     width: 100%;
-    height: 120px;
-    object-fit: cover;
-    margin-top: 15px;
-    border-radius: 8px;
-}
 
-.cabecalhologin,
-.cabecalhocriarconta{
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     margin-top: 50px;
 }
 
-.titulologin,
-.titulocriarconta{
-    color: white;
+
+.cabecalhoauth h1{
+    width: 200px;
+
+    padding: 10px;
+
     background-color: #7A6D8C;
-    width: 170px;
+
     border-radius: 10px;
-    padding: 8px;
-    margin-bottom: 10px;
+
     text-align: center;
+
     font-size: 20px;
 }
 
-.sectionlogin,
-.sectioncriarconta{
-    display: flex;
-    flex-direction: column;
+
+.sectionauth{
     width: 300px;
+
+    max-width: 90%;
+
+    margin: 60px auto;
+
+    display: flex;
+
+    flex-direction: column;
+
     gap: 10px;
-    margin: 80px auto;
-    color: white;
 }
 
-.sectionlogin form,
-.sectioncriarconta form{
+
+.sectionauth form{
     display: flex;
+
     flex-direction: column;
+
     gap: 10px;
 }
+
+
+.avisologin{
+    font-family: Arial, sans-serif;
+
+    color: #ddd;
+
+    text-align: center;
+
+    line-height: 1.5;
+
+    margin-bottom: 10px;
+}
+
+
+/* ==============================
+   CAMPOS DOS FORMULÁRIOS
+============================== */
 
 label{
-    font-size: 14px;
     color: white;
+
+    font-size: 14px;
 }
+
 
 input,
 select,
@@ -279,20 +369,30 @@ textarea{
     font-family: Arial, sans-serif;
 }
 
+
 input,
-select{
+select,
+textarea{
     width: 100%;
+
     padding: 12px;
-    border-radius: 7px;
+
     border: none;
+
+    border-radius: 7px;
+
+    background-color: white;
+
+    color: black;
 }
 
+
 textarea{
-    padding: 12px;
-    border-radius: 7px;
-    border: none;
     resize: vertical;
+
+    min-height: 100px;
 }
+
 
 input:focus,
 select:focus,
@@ -300,318 +400,359 @@ textarea:focus{
     outline: 2px solid #7A6D8C;
 }
 
-.entrar,
-.criar{
-    background-color: #7A6D8C;
-    color: white;
+
+/* ==============================
+   BOTÕES DOS FORMULÁRIOS
+============================== */
+
+.sectionauth button,
+.formfrete button{
+    width: 100%;
+
     border: none;
-    padding: 10px;
+
+    padding: 12px;
+
     border-radius: 7px;
+
+    background-color: #7A6D8C;
+
+    color: white;
+
+    font-family: "Audiowide", sans-serif;
+
     cursor: pointer;
+
     transition: 0.2s;
 }
 
-.entrar:hover,
-.criar:hover{
+
+.sectionauth button:hover,
+.formfrete button:hover{
     background-color: #5f526e;
-    color: white;
+
+    transform: translateY(-2px);
 }
+
+
+.linkauth{
+    text-align: center;
+
+    margin-top: 10px;
+
+    color: #aaa;
+}
+
+
+.linkauth:hover{
+    color: #7A6D8C;
+}
+
 
 .voltar{
+    display: block;
+
     text-align: center;
+
     margin-top: 5px;
+
     color: #aaa;
-    transition: 0.2s;
 }
+
 
 .voltar:hover{
     color: #7A6D8C;
 }
 
-.freteaereo,
-.freteindividual,
-.fretecarga{
-    width: 700px;
-    max-width: 90%;
-    margin: 60px auto;
+
+/* ==============================
+   PÁGINAS DE FRETAMENTO
+============================== */
+
+.fretepagina{
+    width: 750px;
+
+    max-width: 92%;
+
+    margin: 40px auto;
+
     padding: 35px;
+
     background-color: rgb(24, 24, 24);
+
     border-radius: 15px;
-    color: white;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.5);
+
     text-align: center;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
 }
 
-.freteaereo h1,
-.freteindividual h1,
-.fretecarga h1{
+
+.fretepagina h1{
     margin-bottom: 10px;
+
+    font-size: 25px;
 }
 
-.freteaereo > p,
-.freteindividual > p,
-.fretecarga > p{
-    font-family: Arial, sans-serif;
+
+.fretepagina > p{
     margin-bottom: 30px;
-    line-height: 1.5;
+
     color: #ddd;
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.5;
 }
 
-.formfreteaereo,
-.formfreteindividual,
-.formfretecarga{
+
+.formfrete{
     display: flex;
+
     flex-direction: column;
-    gap: 15px;
+
+    gap: 18px;
 }
 
-.campofreteaereo,
-.campofreteindividual,
-.campofretecarga{
+
+.campos{
     display: grid;
+
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+
+    gap: 15px;
+
     text-align: left;
 }
 
-.campofreteaereo label,
-.campofreteindividual label,
-.campofretecarga label{
-    font-size: 14px;
+
+.campo{
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
 }
 
-.freteaereo button,
-.freteindividual button,
-.fretecarga button{
-    padding: 12px;
-    background-color: #7A6D8C;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: "Audiowide", sans-serif;
-    transition: 0.2s;
-}
 
-.freteaereo button:hover,
-.freteindividual button:hover,
-.fretecarga button:hover{
-    background-color: #5f526e;
-    transform: translateY(-2px);
-}
-
-.formfretecarga > label{
+.campoobservacoes{
     text-align: left;
 }
+
+
+/* ==============================
+   COTAÇÃO CONCLUÍDA
+============================== */
 
 .cotacaoconcluida{
     width: 600px;
+
     max-width: 90%;
-    margin: 100px auto;
+
+    margin: 80px auto;
+
     padding: 50px 35px;
+
     background-color: rgb(24, 24, 24);
+
     border-radius: 15px;
-    color: white;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.5);
+
     text-align: center;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
 }
+
 
 .cotacaoconcluida h1{
     margin-bottom: 20px;
 }
 
+
 .cotacaoconcluida p{
-    font-family: Arial, sans-serif;
     margin-bottom: 15px;
+
+    font-family: Arial, sans-serif;
+
     line-height: 1.5;
+
     color: #ddd;
 }
 
+
 .voltarmenu{
     display: inline-block;
+
     margin-top: 20px;
+
     padding: 12px 30px;
+
     background-color: #7A6D8C;
-    color: white;
+
     border-radius: 8px;
+
+    color: white !important;
+
     transition: 0.2s;
 }
 
+
 .voltarmenu:hover{
     background-color: #5f526e;
-    color: white;
+
+    color: white !important;
+
     transform: translateY(-2px);
 }
 
+
+/* ==============================
+   RODAPÉ
+============================== */
+
 footer{
+    margin-top: 40px;
+
+    padding: 20px;
+
     background-color: rgb(24, 24, 24);
-    color: white;
+
     text-align: center;
-    padding: 25px;
-    margin-top: 50px;
-    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.3);
 }
+
 
 footer p{
-    font-family: Arial, sans-serif;
-    font-size: 13px;
     margin: 5px;
+
     color: #ccc;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
 }
 
-@media (max-width: 750px){
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 800px){
 
     .titulomenu{
-        height: auto;
         min-height: 150px;
-        padding: 20px 15px;
+
+        padding: 20px;
     }
 
+
     .titulo{
-        margin-bottom: 80px;
+        margin-bottom: 65px;
     }
+
 
     .h1menu{
         font-size: 28px;
     }
 
+
     .h3menu{
         font-size: 12px;
     }
 
+
     .botoes{
         right: 50%;
-        transform: translateX(50%);
+
         bottom: 15px;
+
+        transform: translateX(50%);
+
         flex-direction: row;
     }
 
-    .botaologin,
-    .botaocriarconta{
-        padding: 9px 15px;
-        font-size: 11px;
-    }
 
-    nav{
-        width: 95%;
-        max-width: 95%;
-    }
-
-    nav ul{
-        gap: 10px;
-        flex-wrap: wrap;
-        padding: 12px 8px;
-    }
-
-    nav a{
-        font-size: 11px;
-    }
-
-    .divli1,
-    .divli2,
-    .divli3{
-        width: 180px;
-    }
-
-    .banner{
-        height: 220px;
-    }
-
-    .banner img{
-        height: 220px;
-    }
-
-    .banner .legendabanner{
-        left: 5%;
-        width: 90%;
-        font-size: 11px;
-    }
-
-    .beneficios{
+    .servicos{
         grid-template-columns: 1fr;
-        justify-items: center;
-        width: 90%;
+
+        max-width: 500px;
     }
 
-    .beneficios article{
-        width: 100%;
-        max-width: 350px;
+
+    .cardservico img{
+        height: 200px;
     }
 
-    .freteaereo,
-    .freteindividual,
-    .fretecarga{
-        width: 90%;
-        max-width: 90%;
+
+    .campos{
+        grid-template-columns: 1fr;
+    }
+
+
+    .fretepagina{
         padding: 25px 20px;
-        margin: 40px auto;
     }
 
-    .freteaereo h1,
-    .freteindividual h1,
-    .fretecarga h1{
-        font-size: 22px;
-    }
-
-    .campofreteaereo,
-    .campofreteindividual,
-    .campofretecarga{
-        grid-template-columns: 1fr;
-    }
-
-    .sectionlogin,
-    .sectioncriarconta{
-        width: 90%;
-        max-width: 350px;
-        margin: 60px auto;
-    }
-
-    .cotacaoconcluida{
-        margin: 60px auto;
-        padding: 35px 20px;
-    }
-
-    .cotacaoconcluida h1{
-        font-size: 22px;
-    }
-
-    footer{
-        padding: 20px 10px;
-    }
 }
+
 
 @media (max-width: 450px){
 
     .botoes{
         width: 90%;
+
         justify-content: center;
     }
 
+
     .botaologin,
     .botaocriarconta{
+        min-width: 0;
+
         flex: 1;
+
+        padding: 9px 10px;
+
+        font-size: 11px;
     }
 
-    nav ul{
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .divli1,
-    .divli2,
-    .divli3{
-        left: 50%;
-    }
 
     .banner{
-        height: 200px;
+        height: 230px;
     }
+
 
     .banner img{
-        height: 200px;
+        height: 230px;
     }
 
-    .banner .legendabanner{
-        font-size: 10px;
+
+    .legendabanner h2{
+        font-size: 24px;
     }
+
+
+    .legendabanner p{
+        font-size: 12px;
+    }
+
+
+    .conteudoservico p{
+        min-height: auto;
+    }
+
+
+    .sectionauth{
+        width: 90%;
+
+        max-width: 350px;
+    }
+
+
+    .cotacaoconcluida{
+        margin: 50px auto;
+
+        padding: 35px 20px;
+    }
+
 }
