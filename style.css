@@ -91,13 +91,13 @@ CARDS DE SERVIÇO
 .cards {
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: stretch;
 gap: 30px;
 width: 100%;
 }
 
 .card {
-width: 250px;
+width: 280px;
 background-color: white;
 border-radius: 12px;
 overflow: hidden;
@@ -112,16 +112,14 @@ text-align: center;
 transform: translateY(-5px);
 }
 
-/* =========================
-IMAGENS DOS CARDS
-========================= */
+/* ÍCONES PEQUENOS E CENTRALIZADOS */
 
 .card img {
-width: 90px;
-height: 90px;
+width: 80px;
+height: 80px;
 object-fit: contain;
 display: block;
-margin: 20px auto 10px auto;
+margin: 25px auto 10px auto;
 }
 
 .card-content {
