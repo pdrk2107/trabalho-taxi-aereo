@@ -1,92 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Glysk - Seu tempo merece voar</title>
+
     <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <title>Glysk</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+        rel="stylesheet"
+    >
+
 </head>
+
 <body>
 
     <header class="titulomenu">
 
         <div class="titulo">
-            <h1 class="h1menu">Glysk</h1>
-            <h3 class="h3menu">Seu tempo merece voar</h3>
+
+            <h1 class="h1menu">
+                Glysk
+            </h1>
+
+            <h3 class="h3menu">
+                Seu tempo merece voar
+            </h3>
+
         </div>
 
-        <section class="botoes">
+        <div class="botoes">
 
-            <a href="login.html" class="botaologin">
+            <a
+                href="login.html"
+                class="botaologin"
+            >
                 Fazer login
             </a>
 
-            <a href="criarconta.html" class="botaocriarconta">
+            <a
+                href="criarconta.html"
+                class="botaocriarconta"
+            >
                 Criar conta
             </a>
 
-        </section>
+        </div>
 
     </header>
-
-
-    <nav>
-
-        <ul>
-
-            <li class="li1">
-
-                <a href="fretamentoaereo.html">
-                    Fretamento aéreo
-                </a>
-
-                <div class="divli1">
-                    <p>
-                        Encontre a aeronave ideal para sua viagem,
-                        com conforto, segurança e flexibilidade.
-                    </p>
-                </div>
-
-            </li>
-
-            <li class="li2">
-
-                <a href="fretamentoindividual.html">
-                    Fretamento individual
-                </a>
-
-                <div class="divli2">
-                    <p>
-                        Personalize sua viagem escolhendo a aeronave,
-                        o destino e o horário que melhor atendem
-                        às suas necessidades.
-                    </p>
-                </div>
-
-            </li>
-
-            <li class="li3">
-
-                <a href="fretamentocarga.html">
-                    Fretamento de carga
-                </a>
-
-                <div class="divli3">
-                    <p>
-                        Transporte suas cargas com segurança e eficiência,
-                        adaptando o serviço às dimensões e necessidades
-                        da sua carga.
-                    </p>
-                </div>
-
-            </li>
-
-        </ul>
-
-    </nav>
 
 
     <main>
@@ -95,67 +72,116 @@
 
             <img
                 src="imagens/aviao.jpg"
-                alt="Avião utilizado em serviço de táxi aéreo"
+                alt="Avião da Glysk"
             >
 
-            <p class="legendabanner">
-                A GLYSK OFERECE HELICÓPTEROS, AVIÕES,
-                SERVIÇOS DE CARGA E JATOS LEVES
-                PARA FRETAMENTOS DE TÁXI AÉREO
-            </p>
+            <div class="legendabanner">
+
+                <h2>
+                    GLYSK
+                </h2>
+
+                <p>
+                    Helicópteros, aviões, jatos e serviços de carga
+                    para atender às suas necessidades.
+                </p>
+
+            </div>
 
         </section>
 
 
-        <section class="beneficios">
+        <section class="servicos">
 
-            <article class="beneficios1">
-
-                <h2>Agilidade</h2>
-
-                <p>
-                    Chegue ao seu destino com rapidez.
-                </p>
+            <a
+                href="fretamentoaereo.html"
+                class="cardservico"
+            >
 
                 <img
                     src="imagens/img2sections.jpg"
-                    alt="Aeronave representando agilidade no transporte"
+                    alt="Avião para fretamento aéreo"
                 >
 
-            </article>
+                <div class="conteudoservico">
+
+                    <h2>
+                        Fretamento aéreo
+                    </h2>
+
+                    <p>
+                        Encontre a aeronave ideal para sua viagem,
+                        com conforto, segurança e flexibilidade.
+                    </p>
+
+                    <span>
+                        Solicitar cotação →
+                    </span>
+
+                </div>
+
+            </a>
 
 
-            <article class="beneficios2">
-
-                <h2>Conforto</h2>
-
-                <p>
-                    Viaje com tranquilidade e comodidade.
-                </p>
+            <a
+                href="fretamentoindividual.html"
+                class="cardservico"
+            >
 
                 <img
                     src="imagens/img1sections.jpg"
-                    alt="Interior de aeronave representando conforto"
+                    alt="Interior de aeronave"
                 >
 
-            </article>
+                <div class="conteudoservico">
+
+                    <h2>
+                        Fretamento individual
+                    </h2>
+
+                    <p>
+                        Personalize sua viagem escolhendo a aeronave,
+                        o destino e o horário que melhor atendem
+                        às suas necessidades.
+                    </p>
+
+                    <span>
+                        Solicitar cotação →
+                    </span>
+
+                </div>
+
+            </a>
 
 
-            <article class="beneficios3">
-
-                <h2>Flexibilidade</h2>
-
-                <p>
-                    Escolha horários e destinos de acordo
-                    com sua necessidade.
-                </p>
+            <a
+                href="fretamentocarga.html"
+                class="cardservico"
+            >
 
                 <img
                     src="imagens/img3sections.jpg"
-                    alt="Aeronave representando flexibilidade de viagem"
+                    alt="Aeronave para transporte de carga"
                 >
 
-            </article>
+                <div class="conteudoservico">
+
+                    <h2>
+                        Fretamento de carga
+                    </h2>
+
+                    <p>
+                        Transporte suas cargas com segurança e eficiência,
+                        adaptando o serviço às suas necessidades.
+                    </p>
+
+                    <span>
+                        Solicitar cotação →
+                    </span>
+
+                </div>
+
+            </a>
 
         </section>
 
@@ -164,7 +190,9 @@
 
     <footer>
 
-        <p>© 2026 Glysk - Seu tempo merece voar</p>
+        <p>
+            © 2026 Glysk - Seu tempo merece voar
+        </p>
 
         <p>
             Táxi aéreo, fretamento e transporte de cargas.
@@ -173,4 +201,5 @@
     </footer>
 
 </body>
+
 </html>
