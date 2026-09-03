@@ -1,62 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <title>Criar conta - Glysk</title>
-</head>
-<body>
-    <header class="cabecalhocriarconta">
 
-        <h1 class="titulocriarconta">
-            Criar Conta
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Criar conta - Glysk</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <header class="cabecalhoauth">
+
+        <h1>
+            Criar conta
         </h1>
+
     </header>
+
+
     <main>
 
-        <section class="sectioncriarconta">
+        <section class="sectionauth">
 
-            <form action="menu.html">
+            <p class="avisologin">
+                Crie sua conta para solicitar os serviços da Glysk.
+            </p>
+
+
+            <form
+                action="menu.html"
+                method="get"
+            >
+
+                <label for="nome">
+                    Nome completo
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
 
                 <label for="email">
-                    E-mail:
+                    E-mail
                 </label>
 
                 <input
                     type="email"
                     id="email"
-                    placeholder="Digite seu E-mail..."
+                    name="email"
+                    placeholder="Digite seu e-mail"
                     required
                 >
 
 
                 <label for="senha">
-                    Senha:
+                    Senha
                 </label>
 
                 <input
                     type="password"
                     id="senha"
-                    placeholder="Digite sua senha..."
+                    name="senha"
+                    placeholder="Digite sua senha"
                     required
                 >
 
 
-                <button type="submit" class="criar">
-                    Criar
+                <label for="confirmarsenha">
+                    Confirmar senha
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmarsenha"
+                    name="confirmarsenha"
+                    placeholder="Digite sua senha novamente"
+                    required
+                >
+
+
+                <button type="submit">
+                    Criar conta
                 </button>
 
             </form>
 
-            <a href="index.html" class="voltar">
+
+            <a
+                href="login.html"
+                class="linkauth"
+            >
+                Já tenho uma conta
+            </a>
+
+
+            <a
+                href="index.html"
+                class="voltar"
+            >
                 Voltar
             </a>
 
         </section>
+
     </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Glysk - Seu tempo merece voar
+        </p>
+
+    </footer>
+
 </body>
+
 </html>
