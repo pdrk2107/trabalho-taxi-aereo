@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login - Fretamento de carga - Glysk</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <header class="cabecalhoauth">
+
+        <h1>
+            Login
+        </h1>
+
+    </header>
+
+
+    <main>
+
+        <section class="sectionauth">
+
+            <p class="avisologin">
+                Faça login para continuar com o fretamento de carga.
+            </p>
+
+
+            <form
+                action="fretamentocargalogado.html"
+                method="get"
+            >
+
+                <label for="email">
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+
+                <label for="senha">
+                    Senha
+                </label>
+
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+
+
+                <button type="submit">
+                    Entrar
+                </button>
+
+            </form>
+
+
+            <a
+                href="criarconta.html"
+                class="linkauth"
+            >
+                Criar uma conta
+            </a>
+
+
+            <a
+                href="fretamentocarga.html"
+                class="voltar"
+            >
+                Voltar para o fretamento de carga
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Glysk - Seu tempo merece voar
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
