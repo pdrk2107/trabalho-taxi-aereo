@@ -1,415 +1,617 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f7fb;
-    color: #222;
+html{
+    overflow-x: hidden;
 }
 
-/* =========================
-   CABEÇALHO
-========================= */
+body{
+    background-color: black;
+    font-family: "Audiowide", sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
-header {
-    background-color: #0b1f3a;
-    color: white;
-    padding: 20px 50px;
+.titulomenu{
+    color: aliceblue;
     display: flex;
-    justify-content: space-between;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto 0;
+    border-radius: 15px;
+    position: relative;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.h1menu{
+    margin: 0;
+}
+
+.h3menu{
+    margin: 0;
+    font-size: 16px;
+}
+
+a{
+    font-size: small;
+    color: white;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    color: #7A6D8C;
+}
+
+a:active{
+    color: #7A6D8C;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 40px;
+}
+
+.botaologin,
+.botaocriarconta{
+    background-color: #7A6D8C;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.botaologin:hover,
+.botaocriarconta:hover{
+    background-color: #5f526e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+nav{
+    background-color: rgb(24, 24, 24);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 540px;
+    max-width: 95%;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+nav ul{
+    gap: 40px;
+    display: flex;
+    list-style: none;
+    padding: 12px 15px;
+    margin: 0;
+    justify-content: center;
     align-items: center;
 }
 
-.logo h1 {
-    font-size: 32px;
-    margin-bottom: 4px;
-}
-
-.logo p {
-    font-size: 14px;
-    color: #cbd7e8;
-}
-
-.header-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.header-buttons a {
-    text-decoration: none;
+nav a{
     color: white;
-    background-color: #1769aa;
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-size: 14px;
-}
-
-.header-buttons a:hover {
-    background-color: #2186d0;
-}
-
-/* =========================
-   CONTAINER
-========================= */
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 30px auto;
-}
-
-/* =========================
-   BANNER
-========================= */
-
-.banner {
-    background-color: #dcecff;
-    border-radius: 12px;
-    padding: 40px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.banner h2 {
-    color: #0b1f3a;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.banner p {
-    font-size: 17px;
-    color: #445;
-}
-
-/* =========================
-   CARDS DE SERVIÇO
-========================= */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.card {
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
     text-decoration: none;
-    color: #222;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-    transition: transform 0.2s;
+    transition: 0.2s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+nav a:hover{
+    color: #7A6D8C;
 }
 
-/* IMAGENS DOS CARDS - DIMINUÍDAS */
+.li1,
+.li2,
+.li3{
+    position: relative;
+}
 
-.card img {
+.divli1,
+.divli2,
+.divli3{
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    padding: 15px;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    z-index: 100;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.divli1 p,
+.divli2 p,
+.divli3 p{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.li1:hover .divli1,
+.li2:hover .divli2,
+.li3:hover .divli3{
+    opacity: 1;
+    visibility: visible;
+}
+
+.banner{
+    position: relative;
+    height: 250px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.banner img{
     width: 100%;
-    height: 150px;
+    height: 250px;
     object-fit: cover;
     display: block;
 }
 
-.card-content {
-    padding: 20px;
-}
-
-.card-content h3 {
-    color: #0b1f3a;
-    margin-bottom: 8px;
-    font-size: 21px;
-}
-
-.card-content p {
-    color: #555;
-    line-height: 1.5;
-}
-
-/* =========================
-   FORMULÁRIOS
-========================= */
-
-.form-box {
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 30px auto;
-}
-
-.form-box h2 {
-    color: #0b1f3a;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.form-group {
-    margin-bottom: 18px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 7px;
-    font-weight: bold;
-    color: #333;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 11px;
-    border: 1px solid #c7cdd6;
-    border-radius: 6px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.form-group textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-/* =========================
-   BOTÕES
-========================= */
-
-.button {
-    display: inline-block;
-    border: none;
-    background-color: #1769aa;
+.banner .legendabanner{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    transform: translateY(-50%);
     color: white;
-    padding: 12px 24px;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
     font-size: 15px;
+    z-index: 10;
     text-align: center;
+    line-height: 1.5;
+    text-shadow: 0 2px 8px black;
 }
 
-.button:hover {
-    background-color: #2186d0;
+.beneficios{
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    margin: 50px auto;
 }
 
-.button-secondary {
-    background-color: #6c757d;
+.beneficios article{
+    background-color: rgb(39, 39, 39);
+    color: white;
+    width: 250px;
+    min-height: 280px;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    transition: 0.2s;
 }
 
-.button-secondary:hover {
-    background-color: #555;
+.beneficios article:hover{
+    transform: scale(1.05);
 }
 
-.form-buttons {
+.beneficios article h2{
+    margin-bottom: 10px;
+}
+
+.beneficios article p{
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+}
+
+.beneficios article img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.cabecalhologin,
+.cabecalhocriarconta{
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-top: 25px;
-}
-
-/* =========================
-   LOGIN
-========================= */
-
-.login-box {
-    max-width: 450px;
-    margin: 60px auto;
-    background-color: white;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-}
-
-.login-box h2 {
-    text-align: center;
-    color: #0b1f3a;
-    margin-bottom: 25px;
-}
-
-.login-box .button {
-    width: 100%;
-}
-
-.login-link {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.login-link a {
-    color: #1769aa;
-    text-decoration: none;
-}
-
-.login-link a:hover {
-    text-decoration: underline;
-}
-
-/* =========================
-   PÁGINA DE CONCLUSÃO
-========================= */
-
-.success-box {
-    max-width: 650px;
-    margin: 70px auto;
-    background-color: white;
-    padding: 45px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-}
-
-.success-box h2 {
-    color: #1769aa;
-    margin-bottom: 15px;
-}
-
-.success-box p {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-/* =========================
-   MENU LOGADO
-========================= */
-
-.menu-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.menu-title h2 {
-    color: #0b1f3a;
-    font-size: 28px;
-    margin-bottom: 8px;
-}
-
-.menu-title p {
-    color: #666;
-}
-
-.logout {
-    display: block;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.logout a {
-    color: #c62828;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.logout a:hover {
-    text-decoration: underline;
-}
-
-/* =========================
-   TÍTULOS
-========================= */
-
-.page-title {
-    text-align: center;
-    color: #0b1f3a;
-    margin-bottom: 25px;
-}
-
-.page-description {
-    text-align: center;
-    color: #666;
-    margin-bottom: 25px;
-}
-
-/* =========================
-   RODAPÉ
-========================= */
-
-footer {
-    background-color: #0b1f3a;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    align-items: center;
     margin-top: 50px;
 }
 
-footer p {
+.titulologin,
+.titulocriarconta{
+    color: white;
+    background-color: #7A6D8C;
+    width: 170px;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.sectionlogin,
+.sectioncriarconta{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+    margin: 80px auto;
+    color: white;
+}
+
+.sectionlogin form,
+.sectioncriarconta form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label{
     font-size: 14px;
-    color: #cbd7e8;
+    color: white;
 }
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
+input,
+select,
+textarea{
+    font-family: Arial, sans-serif;
+}
 
-@media (max-width: 800px) {
+input,
+select{
+    width: 100%;
+    padding: 12px;
+    border-radius: 7px;
+    border: none;
+}
 
-    header {
-        padding: 20px;
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+textarea{
+    padding: 12px;
+    border-radius: 7px;
+    border: none;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline: 2px solid #7A6D8C;
+}
+
+.entrar,
+.criar{
+    background-color: #7A6D8C;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.entrar:hover,
+.criar:hover{
+    background-color: #5f526e;
+    color: white;
+}
+
+.voltar{
+    text-align: center;
+    margin-top: 5px;
+    color: #aaa;
+    transition: 0.2s;
+}
+
+.voltar:hover{
+    color: #7A6D8C;
+}
+
+.freteaereo,
+.freteindividual,
+.fretecarga{
+    width: 700px;
+    max-width: 90%;
+    margin: 60px auto;
+    padding: 35px;
+    background-color: rgb(24, 24, 24);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.freteaereo h1,
+.freteindividual h1,
+.fretecarga h1{
+    margin-bottom: 10px;
+}
+
+.freteaereo > p,
+.freteindividual > p,
+.fretecarga > p{
+    font-family: Arial, sans-serif;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.formfreteaereo,
+.formfreteindividual,
+.formfretecarga{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campofreteaereo,
+.campofreteindividual,
+.campofretecarga{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    text-align: left;
+}
+
+.campofreteaereo label,
+.campofreteindividual label,
+.campofretecarga label{
+    font-size: 14px;
+}
+
+.freteaereo button,
+.freteindividual button,
+.fretecarga button{
+    padding: 12px;
+    background-color: #7A6D8C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Audiowide", sans-serif;
+    transition: 0.2s;
+}
+
+.freteaereo button:hover,
+.freteindividual button:hover,
+.fretecarga button:hover{
+    background-color: #5f526e;
+    transform: translateY(-2px);
+}
+
+.formfretecarga > label{
+    text-align: left;
+}
+
+.cotacaoconcluida{
+    width: 600px;
+    max-width: 90%;
+    margin: 100px auto;
+    padding: 50px 35px;
+    background-color: rgb(24, 24, 24);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.cotacaoconcluida h1{
+    margin-bottom: 20px;
+}
+
+.cotacaoconcluida p{
+    font-family: Arial, sans-serif;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.voltarmenu{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #7A6D8C;
+    color: white;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.voltarmenu:hover{
+    background-color: #5f526e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+footer{
+    background-color: rgb(24, 24, 24);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer p{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin: 5px;
+    color: #ccc;
+}
+
+@media (max-width: 750px){
+
+    .titulomenu{
+        height: auto;
+        min-height: 150px;
+        padding: 20px 15px;
     }
 
-    .cards {
+    .titulo{
+        margin-bottom: 80px;
+    }
+
+    .h1menu{
+        font-size: 28px;
+    }
+
+    .h3menu{
+        font-size: 12px;
+    }
+
+    .botoes{
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 15px;
+        flex-direction: row;
+    }
+
+    .botaologin,
+    .botaocriarconta{
+        padding: 9px 15px;
+        font-size: 11px;
+    }
+
+    nav{
+        width: 95%;
+        max-width: 95%;
+    }
+
+    nav ul{
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 12px 8px;
+    }
+
+    nav a{
+        font-size: 11px;
+    }
+
+    .divli1,
+    .divli2,
+    .divli3{
+        width: 180px;
+    }
+
+    .banner{
+        height: 220px;
+    }
+
+    .banner img{
+        height: 220px;
+    }
+
+    .banner .legendabanner{
+        left: 5%;
+        width: 90%;
+        font-size: 11px;
+    }
+
+    .beneficios{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        width: 90%;
+    }
+
+    .beneficios article{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .freteaereo,
+    .freteindividual,
+    .fretecarga{
+        width: 90%;
+        max-width: 90%;
+        padding: 25px 20px;
+        margin: 40px auto;
+    }
+
+    .freteaereo h1,
+    .freteindividual h1,
+    .fretecarga h1{
+        font-size: 22px;
+    }
+
+    .campofreteaereo,
+    .campofreteindividual,
+    .campofretecarga{
         grid-template-columns: 1fr;
     }
 
-    .form-row {
-        grid-template-columns: 1fr;
+    .sectionlogin,
+    .sectioncriarconta{
+        width: 90%;
+        max-width: 350px;
+        margin: 60px auto;
     }
 
-    .container {
-        width: 94%;
+    .cotacaoconcluida{
+        margin: 60px auto;
+        padding: 35px 20px;
     }
 
-    .banner {
-        padding: 30px 20px;
+    .cotacaoconcluida h1{
+        font-size: 22px;
     }
 
-    .banner h2 {
-        font-size: 25px;
+    footer{
+        padding: 20px 10px;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px){
 
-    .header-buttons {
+    .botoes{
+        width: 90%;
+        justify-content: center;
+    }
+
+    .botaologin,
+    .botaocriarconta{
+        flex: 1;
+    }
+
+    nav ul{
         flex-direction: column;
-        width: 100%;
+        gap: 12px;
     }
 
-    .header-buttons a {
-        width: 100%;
+    .divli1,
+    .divli2,
+    .divli3{
+        left: 50%;
     }
 
-    .form-box,
-    .login-box,
-    .success-box {
-        padding: 22px;
+    .banner{
+        height: 200px;
     }
 
-    .form-buttons {
-        flex-direction: column;
+    .banner img{
+        height: 200px;
     }
 
-    .button {
-        width: 100%;
-    }
-
-    .card img {
-        height: 130px;
+    .banner .legendabanner{
+        font-size: 10px;
     }
 }
