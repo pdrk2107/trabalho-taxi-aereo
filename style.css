@@ -70,7 +70,7 @@ header {
     border-radius: 12px;
     padding: 40px;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .banner h2 {
@@ -89,15 +89,12 @@ header {
 ========================= */
 
 .cards {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 30px;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .card {
-    width: 280px;
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
@@ -105,25 +102,23 @@ header {
     color: #222;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
     transition: transform 0.2s;
-    text-align: center;
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
 
-/* ÍCONES PEQUENOS E CENTRALIZADOS */
+/* IMAGENS DOS CARDS - DIMINUÍDAS */
 
 .card img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
     display: block;
-    margin: 25px auto 10px auto;
 }
 
 .card-content {
-    padding: 15px 20px 25px 20px;
+    padding: 20px;
 }
 
 .card-content h3 {
@@ -369,13 +364,7 @@ footer p {
     }
 
     .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-        max-width: 350px;
+        grid-template-columns: 1fr;
     }
 
     .form-row {
@@ -421,7 +410,6 @@ footer p {
     }
 
     .card img {
-        width: 70px;
-        height: 70px;
+        height: 130px;
     }
 }
