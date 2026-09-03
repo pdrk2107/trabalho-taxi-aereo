@@ -1,21 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Fretamento individual - Glysk</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+        rel="stylesheet"
+    >
+
 </head>
+
 <body>
 
     <header class="titulomenu">
 
         <div class="titulo">
-            <h1 class="h1menu">Glysk</h1>
-            <h3 class="h3menu">Seu tempo merece voar</h3>
+
+            <h1 class="h1menu">
+                Glysk
+            </h1>
+
+            <h3 class="h3menu">
+                Seu tempo merece voar
+            </h3>
+
+        </div>
+
+
+        <div class="botoes">
+
+            <a
+                href="menu.html"
+                class="botaocriarconta"
+            >
+                Menu
+            </a>
+
+            <a
+                href="index.html"
+                class="botaologin"
+            >
+                Sair
+            </a>
+
         </div>
 
     </header>
@@ -23,113 +69,184 @@
 
     <main>
 
-        <section class="freteindividual">
+        <section class="fretepagina">
 
-            <h1>Fretamento individual</h1>
+            <h1>
+                Fretamento individual
+            </h1>
 
             <p>
-                Personalize sua viagem de acordo com suas necessidades.
+                Você está logado. Finalize os dados para solicitar
+                sua cotação.
             </p>
 
+
             <form
-                class="formfreteindividual"
+                class="formfrete"
                 action="cotacaoconcluida.html"
+                method="get"
             >
 
-                <section class="campofreteindividual">
+                <div class="campos">
 
-                    <label for="origem">
-                        Origem
-                    </label>
+                    <div class="campo">
 
-                    <input
-                        type="text"
-                        id="origem"
-                        placeholder="Ex: Rio de Janeiro, RJ"
-                        required
-                    >
+                        <label for="origem">
+                            Origem
+                        </label>
 
+                        <input
+                            type="text"
+                            id="origem"
+                            name="origem"
+                            placeholder="Ex: Porto Alegre, RS"
+                            required
+                        >
 
-                    <label for="destino">
-                        Destino
-                    </label>
-
-                    <input
-                        type="text"
-                        id="destino"
-                        placeholder="Ex: São Paulo, SP"
-                        required
-                    >
+                    </div>
 
 
-                    <label for="data">
-                        Data do voo
-                    </label>
+                    <div class="campo">
 
-                    <input
-                        type="date"
-                        id="data"
-                        required
-                    >
+                        <label for="destino">
+                            Destino
+                        </label>
 
+                        <input
+                            type="text"
+                            id="destino"
+                            name="destino"
+                            placeholder="Ex: Gramado, RS"
+                            required
+                        >
 
-                    <label for="horario">
-                        Horário de saída
-                    </label>
-
-                    <input
-                        type="time"
-                        id="horario"
-                        required
-                    >
+                    </div>
 
 
-                    <label for="aeronave">
-                        Tipo de aeronave
-                    </label>
+                    <div class="campo">
 
-                    <select id="aeronave" required>
+                        <label for="data">
+                            Data do voo
+                        </label>
 
-                        <option value="">
-                            Selecione uma opção
-                        </option>
+                        <input
+                            type="date"
+                            id="data"
+                            name="data"
+                            required
+                        >
 
-                        <option value="jato">
-                            Jato executivo
-                        </option>
-
-                        <option value="aviao">
-                            Avião
-                        </option>
-
-                        <option value="helicoptero">
-                            Helicóptero
-                        </option>
-
-                    </select>
+                    </div>
 
 
-                    <label for="viagem">
-                        Tipo de viagem
-                    </label>
+                    <div class="campo">
 
-                    <select id="viagem" required>
+                        <label for="horario">
+                            Horário de saída
+                        </label>
 
-                        <option value="">
-                            Selecione uma opção
-                        </option>
+                        <input
+                            type="time"
+                            id="horario"
+                            name="horario"
+                            required
+                        >
 
-                        <option value="ida">
-                            Somente ida
-                        </option>
+                    </div>
 
-                        <option value="ida-volta">
-                            Ida e volta
-                        </option>
 
-                    </select>
+                    <div class="campo">
 
-                </section>
+                        <label for="passageiros">
+                            Quantidade de passageiros
+                        </label>
+
+                        <input
+                            type="number"
+                            id="passageiros"
+                            name="passageiros"
+                            min="1"
+                            placeholder="Ex: 2"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="aeronave">
+                            Escolha sua aeronave
+                        </label>
+
+                        <select
+                            id="aeronave"
+                            name="aeronave"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione uma aeronave
+                            </option>
+
+                            <option value="phenom100">
+                                Embraer Phenom 100 - Jato executivo
+                            </option>
+
+                            <option value="phenom300">
+                                Embraer Phenom 300 - Jato executivo
+                            </option>
+
+                            <option value="kingair350">
+                                King Air 350 - Avião
+                            </option>
+
+                            <option value="pc12">
+                                Pilatus PC-12 - Avião
+                            </option>
+
+                            <option value="r44">
+                                Robinson R44 - Helicóptero
+                            </option>
+
+                            <option value="h125">
+                                Airbus H125 - Helicóptero
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="viagem">
+                            Tipo de viagem
+                        </label>
+
+                        <select
+                            id="viagem"
+                            name="viagem"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione uma opção
+                            </option>
+
+                            <option value="ida">
+                                Somente ida
+                            </option>
+
+                            <option value="ida-volta">
+                                Ida e volta
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
 
 
                 <button type="submit">
@@ -145,8 +262,12 @@
 
     <footer>
 
-        <p>© 2026 Glysk - Seu tempo merece voar</p>
+        <p>
+            © 2026 Glysk - Seu tempo merece voar
+        </p>
 
     </footer>
+
 </body>
+
 </html>
